@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    height: 100px;
+    background:linear-gradient(to right, rgba(0, 255, 17, 0.999), rgb(0, 255, 170));
+    display: flex;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+    padding: 20px;
+    text-align: center;
+
+
+}
+h1 {
+    display: flex;
+    justify-content:center;
+    font-size: 3.5rem;
+    align-items: center;
+    padding: 10px;
+    margin: 20px;
+    flex-direction: column;
+    color:black;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0,0.23)
+}
+.game{
+    width: 1000px;
+    max-width: 800px;
+    height:900px;
+    position: relative;
+    border: 6px black solid;
+    overflow: hidden;
+    border-radius: 16px;
+margin-top: 40px;
+box-shadow: 0 8px 30px rgba(0, 0, 0, 0.566);
+}
+.hud{
+    display: flex;
+    gap: 12px;
+    font-weight:bold;
+    position: absolute;
+    left: 16px;
+    top: 12px;
+    text-align: center;
+    z-index: 50px;
+    justify-content:center;
+    
+}
+
+.bin{
+    display: flex;
+    justify-content: center;
+    right: 20px;
+    bottom: 24px;
+    z-index: 40px;
+    position: absolute;
+    font-size: 5rem;
+    text-align: center;
+    align-items: center;
+    margin-left:60px ;
+}
+.binInner {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    margin-left: 50px;
+
+}
+
+.trash{
+    font-size: 26px;
+    position: absolute;
+}
+.trash {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    will-change: transform,left,top;
+    transition: transform 120ms linear;
+}
+.trash.dragging{opacity: 0.35;transform:scale(1.15); z-index: 60; }
+.counter{background: rgba(255, 255, 255, 0.9);}
