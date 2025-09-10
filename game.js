@@ -13,6 +13,14 @@ const levelUpSound= document.getElementById("levelUpSound");
 let level=1;
 let recycle=0;
 
+document.body.addEventListener("click", ()=>{
+    startSound.play().catch(e => console.log("Autoplay blocked:",e));
+}, { once: true});
+
+window.onload=()=>{
+    crateTrash(level*2);
+};
+
 
 
 
@@ -158,4 +166,5 @@ gameEI.addEventListener("click", ()=>{
         msgEI.textContent="put the trashes into bin please";
     }
 });
+
 
